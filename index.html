@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>次のバスまでの時間</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>次のバス（平日）</h1>
+        <div class="info-box">
+            <h2><span id="bus-stop-name">（バス停名）</span> 発 → （行き先名）行き</h2>
+        </div>
+        <div class="info-box current-time-box">
+            <p>現在時刻:</p>
+            <p id="currentTime" class="time-display">--:--:--</p>
+        </div>
+        <div class="info-box next-bus-box">
+            <p>次のバス出発時刻:</p>
+            <p id="nextBusTime" class="time-display">--:--</p>
+            <p>出発まであと:</p>
+            <p id="countdown" class="countdown-display">--分--秒</p>
+            <p id="message" class="message-display"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

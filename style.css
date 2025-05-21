@@ -1,0 +1,81 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #005a9e; /* 三重交通様のカラーをイメージ */
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.current-time-box p:first-child,
+.next-bus-box p:first-child,
+.next-bus-box p:nth-child(3) {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.time-display {
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 0;
+}
+
+.countdown-display {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #28a745; /* 緑色で目立たせる */
+    margin-top: 0;
+}
+
+.message-display {
+    font-size: 1.2em;
+    color: #dc3545; /* 赤色で注意を促す */
+    font-weight: bold;
+}
+
+/* スマートフォン向けの調整例 */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px 20px;
+        margin: 10px;
+    }
+    .time-display {
+        font-size: 1.8em;
+    }
+    .countdown-display {
+        font-size: 2em;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}
