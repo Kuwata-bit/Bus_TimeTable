@@ -21,7 +21,7 @@ let GtfsRealtimeFeedMessage = null; // プロトコルバッファのメッセ�
 // ★ ここに、あなたが確認した `iga_vpos_update_v2.bin` への正しいURLを貼り付けてください ★
 // ★ (例: 'https://bus-vision.jp/sanco/realtime/iga_vpos_update_v2.bin')         ★
 // ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-const GTFS_RT_VEHICLE_POSITIONS_URL = 'YOUR_ACTUAL_BIN_FILE_URL_HERE'; // ← 必ず正しいURLに置き換えてください！
+const GTFS_RT_VEHICLE_POSITIONS_URL = 'https://bus-vision.jp/realtime/ise_vpos_update_v2.bin'; // ← 必ず正しいURLに置き換えてください！
 
 
 // === 共通機能 ===
