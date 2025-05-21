@@ -9,7 +9,7 @@ const messageElement = document.getElementById('message');
 
 // === CSV時刻表ベースの機能のための定数・変数 ===
 // ここにGoogleスプレッドシートから発行したCSVのURLを貼り付けてください
-const SPREADSHEET_URL = 'YOUR_PUBLISHED_GOOGLE_SHEET_CSV_URL'; // ← GoogleスプレッドシートのCSV公開URL
+const SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQF1H6eCIEv3AJ23kdwKsYiO6X8V2XgTpHxLYNJE9CkympIW3ZTJm9q4qzQrWKAzOUwFR1fwrwX-lGv/pub?gid=0&single=true&output=csv'; // ← GoogleスプレッドシートのCSV公開URL
 // 時刻が記載されている列のインデックス (0から始まる。例: 最初の列なら0)
 const TIME_COLUMN_INDEX = 0; // IMPORTHTMLで取得したデータに合わせて調整してください
 let timetable = []; // CSV時刻表データを格納する配列
