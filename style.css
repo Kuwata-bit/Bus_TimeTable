@@ -79,3 +79,24 @@ h2 {
         font-size: 1.5em;
     }
 }
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em; /* 文字を少し小さくする */
+    color: #666; /* 文字色を少し薄くする */
+    margin-top: 30px; /* 上のコンテンツとの間隔 */
+    border-top: 1px solid #eee; /* 上に境界線を入れる */
+}
+
+footer p {
+    margin: 5px 0; /* 段落間の余白を調整 */
+}
+
+footer a {
+    color: #007bff; /* リンクの色を調整 */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
