@@ -1,24 +1,31 @@
+/* === 基本スタイル (PC・テレビ向け) === */
 body {
     font-family: sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* コンテンツを縦に並べる */
+    align-items: center; /* 水平中央揃え */
     min-height: 100vh;
     margin: 0;
+    padding: 20px; /* 画面端の余白 */
+    box-sizing: border-box; /* paddingをwidth/height計算に含める */
     background-color: #f4f4f4;
     color: #333;
-    text-align: center;
 }
 
 .container {
     background-color: #fff;
-    padding: 20px 40px;
+    padding: 20px 40px; /* PC/テレビでの内部余白 */
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center; /* コンテナ内のテキストを中央揃え */
+    width: 100%; /* 親要素(bodyのpadding内)いっぱいに広がる */
+    max-width: 900px; /* PC/テレビでの最大幅 */
+    margin-bottom: 30px; /* フッターとの間隔 */
 }
 
 h1 {
     color: #005a9e; /* 三重交通様のカラーをイメージ */
+    font-size: 2.2em; /* PC/テレビ向けに少し調整 */
 }
 
 h2 {
@@ -44,14 +51,14 @@ h2 {
 }
 
 .time-display {
-    font-size: 2em;
+    font-size: 2.5em; /* PC/テレビ向けに調整 */
     font-weight: bold;
     color: #007bff;
     margin-top: 0;
 }
 
 .countdown-display {
-    font-size: 2.5em;
+    font-size: 3em; /* PC/テレビ向けに調整 */
     font-weight: bold;
     color: #28a745; /* 緑色で目立たせる */
     margin-top: 0;
@@ -61,42 +68,92 @@ h2 {
     font-size: 1.2em;
     color: #dc3545; /* 赤色で注意を促す */
     font-weight: bold;
+    min-height: 1.5em; /* メッセージがない時も高さを確保（レイアウト崩れ防止） */
 }
 
-/* スマートフォン向けの調整例 */
-@media (max-width: 600px) {
-    .container {
-        padding: 15px 20px;
-        margin: 10px;
-    }
-    .time-display {
-        font-size: 1.8em;
-    }
-    .countdown-display {
-        font-size: 2em;
-    }
-    h1 {
-        font-size: 1.5em;
-    }
+/* 将来の路線図コンテナのスタイル（PC/テレビ向け例：横長） */
+.route-map-container {
+    width: 100%;
+    /* 例：横長の路線図を想定したスタイル */
+    /* display: flex; flex-direction: row; justify-content: space-around; */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    min-height: 150px; /* 仮の高さ */
+    box-sizing: border-box;
 }
+
 footer {
     text-align: center;
-    padding: 20px;
-    font-size: 0.8em; /* 文字を少し小さくする */
-    color: #666; /* 文字色を少し薄くする */
-    margin-top: 30px; /* 上のコンテンツとの間隔 */
-    border-top: 1px solid #eee; /* 上に境界線を入れる */
+    padding: 15px; /* 少し調整 */
+    font-size: 0.8em;
+    color: #666;
+    width: 100%;
+    max-width: 900px; /* コンテナの最大幅と合わせる */
+    border-top: 1px solid #eee;
+    box-sizing: border-box;
 }
 
 footer p {
-    margin: 5px 0; /* 段落間の余白を調整 */
+    margin: 5px 0;
 }
 
 footer a {
-    color: #007bff; /* リンクの色を調整 */
+    color: #007bff;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* === スマートフォン向けスタイル (画面幅が600px以下の場合) === */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* スマートフォンでは画面端の余白を減らす */
+    }
+
+    .container {
+        padding: 15px 15px; /* スマートフォンでの内部余白を調整 */
+        margin-bottom: 20px; /* フッターとの間隔を調整 */
+        /* max-width: 100%; は親(body)のpaddingがあるので不要、width: 100%でOK */
+    }
+
+    h1 {
+        font-size: 1.6em; /* スマートフォン向けフォントサイズ */
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    .info-box {
+        padding: 10px;
+    }
+
+    .time-display {
+        font-size: 1.8em;
+    }
+
+    .countdown-display {
+        font-size: 2.2em;
+    }
+
+    .message-display {
+        font-size: 1em;
+    }
+
+    /* 将来の路線図コンテナのスタイル（スマートフォン向け例：縦長） */
+    .route-map-container {
+        /* 例：縦長の路線図を想定したスタイル */
+        /* display: flex; flex-direction: column; align-items: center; */
+        min-height: 250px; /* スマートフォンで縦に場所を取る場合の仮の高さ */
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 0.75em;
+        padding: 10px;
+    }
 }
