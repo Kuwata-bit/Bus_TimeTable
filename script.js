@@ -226,7 +226,7 @@ async function fetchAndProcessRealtimeBusData() {
 
     } catch (error) {
         console.error("リアルタイムバス位置情報の取得または解析中にエラー:", error);
-        if (messageElement) messageElement.textContent = `バス位置情報エラー: ${error.message}`;
+        if (messageElement) messageElement.textContent = `バス位置情報エラー: ${error.message}現在解決にむけて絶賛奮闘中`;
     }
 }
 
